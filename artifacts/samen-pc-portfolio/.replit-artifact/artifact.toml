@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "SAMEN-PC Portfolio"
+description = "An interactive Windows XP-inspired personal portfolio for Ahmad Omar Abu Elsamen, presented as a nostalgic desktop computer experience with apps, terminal, projects, achievements, skills, contact, guestbook, and playful Easter eggs."
+version = "1.0.0"
+id = "artifacts/samen-pc-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22788
+
+[services.development]
+run = "pnpm --filter @workspace/samen-pc-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/samen-pc-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/samen-pc-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22788"
+BASE_PATH = "/"

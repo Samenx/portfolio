@@ -1,0 +1,657 @@
+Build a highly interactive personal portfolio website for **AHMAD OMAR ABU ELSAMEN**, a Computer Science student and software developer from Amman, Jordan.
+
+## CORE CONCEPT
+
+The entire portfolio should feel like the visitor has just turned on an old **Windows XP-era computer**.
+
+Do NOT make this look like a normal modern portfolio with a navbar, hero section, cards, and scrolling sections.
+
+The website itself IS the computer.
+
+When the visitor enters the website:
+
+1. Show a convincing retro computer boot sequence.
+
+2. Display BIOS-style startup text.
+
+3. Show something like:
+
+   `AHMAD-PC BIOS v1.0`
+   `Initializing hardware...`
+   `Memory test: OK`
+   `Loading AHMAD_OS...`
+
+4. Then show a Windows XP-inspired startup/loading screen.
+
+5. Transition into a complete retro desktop.
+
+The experience should feel nostalgic, playful, slightly chaotic, and impressive.
+
+## VISUAL STYLE
+
+Use a highly convincing **Windows XP-inspired interface**, but do not simply copy the original Windows XP website.
+
+Use:
+
+* Classic blue XP-style desktop aesthetic
+* Retro gradients
+* Pixel/bitmap-inspired details
+* Old-school system dialogs
+* Windows-style title bars
+* Gray/blue UI controls
+* Desktop icons
+* Taskbar
+* Start menu
+* System tray
+* Fake notifications
+* CRT-style subtle effects
+* Slight screen distortion/noise
+* Retro mouse cursor
+* Old computer UI sounds
+* Windows opening/closing/minimizing animations
+* Occasional fake system notifications
+* Pixelated icons
+* Nostalgic typography
+
+Make it feel like an actual old computer rather than a website pretending to be one.
+
+The design should be **crazy and fun**, but the actual information must remain easy to read.
+
+Do NOT make the interface so chaotic that users cannot navigate it.
+
+## DESKTOP
+
+After booting, show a desktop containing clickable icons.
+
+Desktop icons:
+
+* 👤 About Ahmad
+* 💻 Projects
+* 🏆 Achievements
+* ⚙ Skills
+* 🖥 Terminal
+* 📡 Contact
+* 🌐 Internet
+* 📝 Guestbook
+* 🗑 Recycle Bin
+
+Allow icons to be opened by double-clicking.
+
+Allow windows to:
+
+* Open
+* Close
+* Minimize
+* Maximize
+* Move around the desktop
+* Overlap each other
+* Be dragged
+* Have realistic title bars
+
+Add a functional taskbar showing currently opened applications.
+
+## START MENU
+
+Create a working XP-inspired Start Menu.
+
+It should contain:
+
+**Programs**
+
+* About Ahmad
+* Projects
+* Terminal
+* Skills
+* Achievements
+* Contact
+
+**Recent Documents**
+
+* SEER
+* GHARSA
+* Operating System
+* Linux From Scratch
+* Mentora
+
+**System**
+
+* My Computer
+* Control Panel
+* Search
+* Run
+
+The Start Menu should actually work.
+
+## BOOT / COMPUTER IDENTITY
+
+The computer username should be:
+
+`SAMEN`
+
+Use this throughout the interface.
+
+For example:
+
+`C:\Users\SAMEN>`
+
+The machine can be called:
+
+`SAMEN-PC`
+
+The terminal prompt should use:
+
+`SAMEN@AHMAD-PC`
+
+## ABOUT AHMAD
+
+Create an application called:
+
+`About Ahmad.exe`
+
+Inside it show:
+
+**AHMAD OMAR ABU ELSAMEN**
+
+Amman, Jordan
+
+**Computer Science Student | Software Development**
+
+Then display:
+
+> Computer Science student at Al Hussein Technical University with a strong focus on software development, systems, and problem solving.
+
+> Solved 200+ programming problems across competitive programming platforms, with a highest Codeforces rating of 1009.
+
+> Experienced in building web applications, developing a simple operating system using C and Assembly, building a Linux system from source, and developing software connected to embedded hardware.
+
+> Strong in C, Java, JavaScript, SQL, web development, Linux, and Bash.
+
+> Seeking a Software Development Internship to apply technical skills to real-world products and gain professional industry experience.
+
+Include a small profile section and make it feel like an old Windows "System Properties" window.
+
+Do NOT include the actual CV file anywhere on the website.
+
+## PROJECTS
+
+Create a `My Projects` application.
+
+Each project should open as its own Windows-style application/window.
+
+### 1. SEER
+
+Title:
+
+`SEER — Marine Fishing Support System`
+
+Role:
+
+`Team Leader & Application Developer`
+
+Description:
+
+A smart fishing support system designed to help fishermen make better decisions about where to fish by combining environmental and location data, reducing time and resources wasted searching for suitable areas.
+
+Show:
+
+* React
+* Node.js
+* SQL
+* ESP32
+* Sensors
+* GPS
+* Environmental data
+* Software analytics
+
+Details:
+
+* Led the project team
+* Assigned development tasks
+* Coordinated the software side
+* Built the application using React and Node.js with SQL
+* Connected the application to an ESP32-based hardware system
+* ESP32 acts as the central hardware controller
+* Connects sensors and GPS
+* Sends environmental/location data to the application
+
+Show a visual representation of the SEER system.
+
+Make this one of the most visually impressive project windows.
+
+### 2. GHARSA
+
+Title:
+
+`GHARSA — Plant E-Commerce Platform`
+
+Description:
+
+A plant e-commerce platform designed for the Jordanian market.
+
+The platform enables customers to browse and purchase plants online while providing detailed information about each plant, including suitable temperature and humidity conditions.
+
+It combines online shopping with plant-care guidance, helping customers choose suitable plants and understand how to properly care for them.
+
+Show technologies/features such as:
+
+* WordPress
+* E-commerce
+* Product management
+* Plant database
+* Plant-care information
+* Temperature information
+* Humidity information
+* Jordanian market
+* JOD pricing
+
+Highlight that GHARSA achieved:
+
+`2ND PLACE — E-COMMERCE WEBSITE COMPETITION 2026`
+
+### 3. Operating System Development
+
+Title:
+
+`Operating System Development`
+
+Description:
+
+Developed a simple operating system from the ground up to understand core operating-system concepts and low-level computer operation.
+
+Technologies:
+
+`C`
+`Assembly`
+`Git`
+`GitHub`
+
+Details:
+
+* Implemented the system using C and Assembly
+* Worked directly with low-level system functionality
+* Used Git and GitHub for development and version tracking
+* Continuing to improve the system's functionality
+
+Make this project visually resemble a low-level computer/system diagnostic application.
+
+### 4. Linux From Scratch
+
+Title:
+
+`Linux From Scratch (LFS)`
+
+Technologies:
+
+`Linux`
+`Bash`
+
+Description:
+
+Built a Linux-based system from source using the Linux From Scratch methodology to gain practical understanding of Linux internals and system construction.
+
+Details:
+
+* Downloaded required software
+* Extracted source packages
+* Configured software
+* Compiled components
+* Installed components
+* Worked extensively with Linux
+* Used Bash
+* Worked with source code
+* Configured the system manually
+
+Make this application look like an old Linux terminal running inside the Windows XP computer.
+
+### 5. Mentora
+
+Title:
+
+`Mentora — Online Course Management Application`
+
+Description:
+
+Developed a full-stack CRUD web application for managing and selling online courses, bringing course, user, and purchasing workflows into one system.
+
+Show:
+
+* Full-stack web application
+* CRUD
+* Courses
+* Users
+* Purchasing
+* Database
+
+Details:
+
+Implemented core Create, Read, Update, and Delete functionality for the application's main entities.
+
+## ACHIEVEMENTS
+
+Create an application called:
+
+`Achievements.exe`
+
+Make achievements appear as collectible trophies/badges.
+
+### Achievement 1
+
+🏆
+
+`3RD PLACE — HTU BLUE HORIZONS HACKATHON`
+
+`2026`
+
+Explain:
+
+Led the development of SEER, a marine fishing support system combining environmental sensor data, GPS, and software analytics to help fishermen identify potential fishing areas and reduce wasted time and resources.
+
+The project qualified for the Blue Horizons Exhibition in Aqaba.
+
+### Achievement 2
+
+🥈
+
+`2ND PLACE — E-COMMERCE WEBSITE COMPETITION`
+
+`2026`
+
+Project:
+
+`GHARSA`
+
+Explain that GHARSA is a plant e-commerce platform designed for the Jordanian market.
+
+### Achievement 3
+
+`JCPC — Jordan Collegiate Programming Contest`
+
+`2024`
+
+Participated as part of a team in a competitive programming environment focused on algorithmic problem solving.
+
+### Achievement 4
+
+`COMPETITIVE PROGRAMMING`
+
+`200+ PROBLEMS`
+
+Highest Codeforces rating:
+
+`1009`
+
+Make this look like a game achievement/statistics screen.
+
+## SKILLS
+
+Create a `Control Panel` style application.
+
+Organize skills into categories.
+
+### Programming
+
+* C
+* Java
+* JavaScript
+* SQL
+
+### Web Development
+
+* HTML
+* CSS
+* JavaScript
+* React
+* Node.js
+* HTTP APIs
+* JSON
+
+### Databases
+
+* SQL
+* MySQL
+
+### Systems
+
+* Linux
+* Bash
+* Operating Systems
+* Computer Architecture
+
+### Cybersecurity
+
+* Web Application Security
+* CTF
+* Wireshark
+* TCP/IP
+* UDP
+
+### Hardware & Embedded
+
+* ESP32
+* Arduino
+* Raspberry Pi
+
+### Tools & Other
+
+* Git
+* GitHub
+* Java Swing
+* Cisco Packet Tracer
+* Unity
+
+Instead of ordinary skill bars, represent these as installed programs/components inside the computer.
+
+## TERMINAL
+
+Create a genuinely interactive terminal.
+
+When opened, display something like:
+
+`Microsoft Windows XP [Version 5.1]`
+
+`C:\Users\SAMEN>`
+
+Support commands such as:
+
+`help`
+
+`about`
+
+`projects`
+
+`skills`
+
+`achievements`
+
+`contact`
+
+`github`
+
+`linkedin`
+
+`clear`
+
+`whoami`
+
+`date`
+
+`matrix`
+
+For example:
+
+`C:\Users\SAMEN> whoami`
+
+returns:
+
+`SAMEN — Computer Science Student / Software Developer`
+
+Make the terminal fun and responsive.
+
+Add hidden Easter eggs.
+
+Examples:
+
+* `sudo`
+* `hack`
+* `rm -rf /`
+* `coffee`
+* `secret`
+* `konami`
+
+Do not make destructive commands actually do anything.
+
+## CONTACT
+
+Create:
+
+`Outlook Express.exe`
+
+or a retro email/contact application.
+
+Show:
+
+**Ahmad Omar Abu Elsamen**
+
+📍 Amman, Jordan
+
+📧 [ahmadsamenpc@gmail.com](mailto:ahmadsamenpc@gmail.com)
+
+📱 +962 7 7060 1798
+
+LinkedIn:
+
+`linkedin.com/in/ahmad-abu-elsamen-13102a292`
+
+GitHub:
+
+`github.com/Samenx`
+
+Make the links clickable.
+
+Add a simple contact form styled like an old email composer.
+
+## INTERNET EXPLORER
+
+Create a fake/retro browser application called:
+
+`Internet Explorer`
+
+It can display a simple portfolio landing page or links to:
+
+* GitHub
+* LinkedIn
+* SEER
+* GHARSA
+
+Make it visually consistent with the retro computer theme.
+
+## GUESTBOOK
+
+Add a fun `Guestbook.exe`.
+
+Visitors can enter:
+
+* Name
+* Message
+
+Display submitted messages as old-school guestbook entries.
+
+If there is no backend, use local browser storage and clearly make it a client-side guestbook.
+
+## RECYCLE BIN
+
+Make the Recycle Bin interactive.
+
+Opening it can show funny deleted/fake files such as:
+
+`old_homework.exe`
+`bug_final_FINAL.exe`
+`definitely_not_AI.txt`
+`coffee.jpg`
+
+These can trigger funny dialogs when clicked.
+
+## EASTER EGGS
+
+Go crazy with Easter eggs.
+
+Include things such as:
+
+* Random Windows XP-style error dialogs
+* Fake "You have mail" notifications
+* Occasional "Critical Error" messages that are harmless
+* Screensaver
+* Fake BSOD triggered by a secret interaction
+* Minesweeper-style mini game
+* Snake mini game
+* Secret developer room
+* Konami code
+* Terminal secrets
+* Fake loading bars
+* Random desktop notifications
+* CRT flicker
+* Startup sounds
+* Keyboard typing sounds
+* Error sounds
+* Window opening/closing sounds
+
+Everything must remain harmless and easily dismissible.
+
+## DESIGN PHILOSOPHY
+
+The website should make someone think:
+
+> "What the hell is this?"
+
+Then:
+
+> "Wait... this is actually his portfolio."
+
+It should be memorable enough that a recruiter remembers Ahmad after leaving the site.
+
+However, do NOT sacrifice usability.
+
+The professional information must remain clear.
+
+The retro design is the presentation layer; the content should still communicate that Ahmad is a serious Computer Science student and software developer.
+
+## RESPONSIVE DESIGN
+
+On desktop, reproduce the full computer experience.
+
+On mobile, do NOT simply shrink the desktop.
+
+Create a mobile-friendly version that still feels like a retro computer, with:
+
+* Virtual desktop
+* Touch-friendly icons
+* Windows that fit the screen
+* Responsive terminal
+* Responsive project windows
+* No horizontal overflow
+
+## PERFORMANCE
+
+Keep animations smooth.
+
+Do not use enormous assets unnecessarily.
+
+Lazy-load heavy project images/assets.
+
+Avoid excessive CPU usage from CRT effects or animations.
+
+## IMPORTANT
+
+Do NOT create a conventional portfolio website.
+
+Do NOT create a normal navbar.
+
+Do NOT create a generic hero section.
+
+Do NOT use generic modern SaaS cards.
+
+Do NOT include the actual CV file.
+
+The visitor should feel like they are interacting with **SAMEN-PC**, an old Windows XP-inspired personal computer containing Ahmad's portfolio.
+
+The final result should be polished enough to use as a real professional portfolio while being extremely memorable and fun.

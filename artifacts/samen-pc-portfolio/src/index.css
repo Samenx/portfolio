@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-primary-border: var(--sidebar-primary-border);
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-accent-border: var(--sidebar-accent-border);
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* SAMEN-PC / phosphor amber on deep teal */
+:root {
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+
+  /* Automatic computation of border around primary / danger buttons */
+  --opaque-button-border-intensity: -8; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
+
+  --background: 186 39% 10%;
+  --foreground: 45 35% 91%;
+  --border: 179 30% 26%;
+  --card: 184 35% 14%;
+  --card-foreground: 45 35% 91%;
+  --card-border: 179 30% 29%;
+  --sidebar: 186 39% 9%;
+  --sidebar-foreground: 45 35% 91%;
+  --sidebar-border: 179 30% 24%;
+  --sidebar-primary: 41 93% 62%;
+  --sidebar-primary-foreground: 186 39% 10%;
+  --sidebar-accent: 178 43% 20%;
+  --sidebar-accent-foreground: 45 35% 91%;
+  --sidebar-ring: 41 93% 62%;
+  --popover: 184 35% 14%;
+  --popover-foreground: 45 35% 91%;
+  --popover-border: 179 30% 29%;
+  --primary: 41 93% 62%;
+  --primary-foreground: 186 39% 10%;
+  --secondary: 178 43% 20%;
+  --secondary-foreground: 45 35% 91%;
+  --muted: 181 24% 20%;
+  --muted-foreground: 181 17% 65%;
+  --accent: 11 76% 61%;
+  --accent-foreground: 184 35% 10%;
+  --destructive: 4 73% 59%;
+  --destructive-foreground: 45 35% 91%;
+  --input: 179 30% 29%;
+  --ring: 41 93% 62%;
+  --chart-1: 41 93% 62%;
+  --chart-2: 178 61% 50%;
+  --chart-3: 11 76% 61%;
+  --chart-4: 285 54% 66%;
+  --chart-5: 95 64% 55%;
+  --app-font-sans: 'Space Grotesk', sans-serif;
+  --app-font-serif: 'Chakra Petch', sans-serif;
+  --app-font-mono: 'DM Mono', monospace;
+  --radius: 0.35rem;
+  --shadow-2xs: 0px 2px 0px 0px hsl(186 39% 4% / 0.25);
+  --shadow-xs: 0px 2px 0px 0px hsl(186 39% 4% / 0.25);
+  --shadow-sm:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 1px 2px -1px hsl(186 39% 4% / 0.25);
+  --shadow:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 1px 2px -1px hsl(186 39% 4% / 0.25);
+  --shadow-md:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 2px 4px -1px hsl(186 39% 4% / 0.32);
+  --shadow-lg:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 4px 6px -1px hsl(186 39% 4% / 0.35);
+  --shadow-xl:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 8px 10px -1px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-2xl: 0px 8px 18px 0px hsl(186 39% 4% / 0.38);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
+
+  /* Fallback for older browsers */
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(
+    from hsl(var(--sidebar-primary)) h s
+      calc(l + var(--opaque-button-border-intensity)) / alpha
+  );
+
+  /* Fallback for older browsers */
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(
+    from hsl(var(--sidebar-accent)) h s
+      calc(l + var(--opaque-button-border-intensity)) / alpha
+  );
+
+  /* Fallback for older browsers */
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(
+    from hsl(var(--primary)) h s
+      calc(l + var(--opaque-button-border-intensity)) / alpha
+  );
+
+  /* Fallback for older browsers */
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(
+    from hsl(var(--secondary)) h s
+      calc(l + var(--opaque-button-border-intensity)) / alpha
+  );
+
+  /* Fallback for older browsers */
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(
+    from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) /
+      alpha
+  );
+
+  /* Fallback for older browsers */
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(
+    from hsl(var(--accent)) h s
+      calc(l + var(--opaque-button-border-intensity)) / alpha
+  );
+
+  /* Fallback for older browsers */
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(
+    from hsl(var(--destructive)) h s
+      calc(l + var(--opaque-button-border-intensity)) / alpha
+  );
+}
+
+.dark {
+  --button-outline: rgba(255, 255, 255, 0.1);
+  --badge-outline: rgba(255, 255, 255, 0.05);
+
+  --opaque-button-border-intensity: 9; /* In terms of percentages */
+
+  /* Backgrounds applied on top of other backgrounds when hovered/active */
+  --elevate-1: rgba(255, 255, 255, 0.04);
+  --elevate-2: rgba(255, 255, 255, 0.09);
+
+  --background: 186 39% 10%;
+  --foreground: 45 35% 91%;
+  --border: 179 30% 26%;
+  --card: 184 35% 14%;
+  --card-foreground: 45 35% 91%;
+  --card-border: 179 30% 29%;
+  --sidebar: 186 39% 9%;
+  --sidebar-foreground: 45 35% 91%;
+  --sidebar-border: 179 30% 24%;
+  --sidebar-primary: 41 93% 62%;
+  --sidebar-primary-foreground: 186 39% 10%;
+  --sidebar-accent: 178 43% 20%;
+  --sidebar-accent-foreground: 45 35% 91%;
+  --sidebar-ring: 41 93% 62%;
+  --popover: 184 35% 14%;
+  --popover-foreground: 45 35% 91%;
+  --popover-border: 179 30% 29%;
+  --primary: 41 93% 62%;
+  --primary-foreground: 186 39% 10%;
+  --secondary: 178 43% 20%;
+  --secondary-foreground: 45 35% 91%;
+  --muted: 181 24% 20%;
+  --muted-foreground: 181 17% 65%;
+  --accent: 11 76% 61%;
+  --accent-foreground: 184 35% 10%;
+  --destructive: 4 73% 59%;
+  --destructive-foreground: 45 35% 91%;
+  --input: 179 30% 29%;
+  --ring: 41 93% 62%;
+  --chart-1: 41 93% 62%;
+  --chart-2: 178 61% 50%;
+  --chart-3: 11 76% 61%;
+  --chart-4: 285 54% 66%;
+  --chart-5: 95 64% 55%;
+
+  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-xs: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-sm:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 1px 2px -1px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-md:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 2px 4px -1px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-lg:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 4px 6px -1px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-xl:
+    0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0),
+    0px 8px 10px -1px hsl(202.8169 89.1213% 53.1373% / 0);
+  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* SAMEN-PC interface layer */
+html, body, #root { min-height: 100%; }
+body {
+  overflow: hidden;
+  background: #102f34;
+  color: #f6efcf;
+  font-family: var(--app-font-sans);
+}
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #f4c95d; color: #102f34; }
+
+.boot-shell {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: #050e12;
+  color: #e9f5d0;
+  font-family: var(--app-font-mono);
+  position: relative;
+  overflow: hidden;
+}
+.boot-shell::after, .desktop-shell::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  inset: 0;
+  opacity: .055;
+  z-index: 80;
+  background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.2) 0 1px, transparent 1px 4px);
+  mix-blend-mode: screen;
+}
+.bios {
+  width: min(760px, calc(100% - 40px));
+  padding: 24px 0;
+  animation: bootIn .45s ease both;
+}
+.bios-top { color: #a8bb9b; display: flex; justify-content: space-between; border-bottom: 1px solid #31504b; padding-bottom: 8px; font-size: 11px; }
+.bios-line { font-size: clamp(11px, 1.6vw, 15px); line-height: 1.7; color: #c7d8bd; }
+.bios-line.dim { color: #6b8278; }
+.boot-brand { color: #f4c95d; font-family: var(--app-font-serif); font-size: clamp(38px, 9vw, 88px); line-height: .9; letter-spacing: -.07em; margin: 32px 0 22px; }
+.boot-progress { height: 4px; background: #1c3533; margin-top: 28px; overflow: hidden; }
+.boot-progress > i { display: block; height: 100%; background: #f4c95d; width: 0; animation: loadBar 4s linear forwards; }
+.boot-prompt { margin-top: 12px; color: #78958b; font-size: 11px; }
+
+.desktop-shell { min-height: 100dvh; position: relative; overflow: hidden; background: #126068; isolation: isolate; }
+.desktop-wallpaper {
+  position: absolute; inset: 0 0 38px;
+  background: radial-gradient(circle at 78% 18%, rgba(244,201,93,.13), transparent 23%), radial-gradient(circle at 21% 80%, rgba(238,105,77,.11), transparent 28%), #126068;
+}
+.desktop-wallpaper::before { content: ""; position: absolute; inset: 0; opacity: .28; background-image: linear-gradient(rgba(244,201,93,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(244,201,93,.1) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(145deg, #000, transparent 78%); }
+.desktop-wallpaper::after { content: "SAMEN-PC"; position: absolute; right: 4vw; bottom: 4vh; font-family: var(--app-font-serif); font-size: clamp(72px, 16vw, 240px); font-weight: 700; letter-spacing: -.09em; color: rgba(244,201,93,.06); }
+.desktop-icons { position: absolute; top: 22px; left: 22px; display: grid; grid-template-columns: 90px; gap: 18px; z-index: 1; }
+.desktop-icon { width: 90px; padding: 6px 4px; border: 1px solid transparent; color: #f2f0d8; text-align: center; font-size: 11px; text-shadow: 1px 2px 1px #0b363d; transition: background .16s ease, border-color .16s ease, transform .16s ease; }
+.desktop-icon:hover, .desktop-icon:focus-visible { background: rgba(17,40,44,.44); border-color: rgba(244,201,93,.55); }
+.desktop-icon:active { transform: translateY(1px); }
+.icon-tile { width: 44px; height: 44px; margin: 0 auto 5px; display: grid; place-items: center; color: #f4c95d; background: #173f43; border: 1px solid #50746e; box-shadow: 3px 3px 0 rgba(4,27,31,.42); }
+.icon-tile svg { width: 23px; height: 23px; }
+.desktop-window { position: absolute; min-width: 280px; min-height: 180px; background: #123b40; border: 1px solid #89a998; box-shadow: 8px 9px 0 rgba(4,27,31,.4), 0 0 0 1px rgba(244,201,93,.15); display: flex; flex-direction: column; overflow: hidden; animation: windowIn .2s ease both; }
+.desktop-window.maximized { inset: 8px 8px 42px 8px !important; width: auto !important; height: auto !important; }
+.window-titlebar { min-height: 34px; padding: 5px 6px 5px 10px; display: flex; align-items: center; gap: 9px; background: #204d4f; border-bottom: 1px solid #6b9485; user-select: none; touch-action: none; }
+.window-title { font-family: var(--app-font-serif); letter-spacing: .02em; font-weight: 600; font-size: 13px; flex: 1; color: #f6efcf; }
+.window-mark { width: 16px; height: 16px; display: grid; place-items: center; color: #102f34; background: #f4c95d; font-size: 10px; font-weight: 700; }
+.window-controls { display: flex; gap: 4px; }
+.window-controls button { width: 22px; height: 22px; color: #f6efcf; background: #2b5a59; border: 1px solid #80a291; display: grid; place-items: center; }
+.window-controls button:hover { background: #f4c95d; color: #102f34; }
+.window-controls .close:hover { background: #ee694d; color: #fff7e3; }
+.window-body { flex: 1; overflow: auto; padding: 22px; background: #133c41; }
+.window-body::-webkit-scrollbar { width: 9px; height: 9px; }.window-body::-webkit-scrollbar-thumb { background: #446e6c; border: 2px solid #133c41; }.window-body::-webkit-scrollbar-track { background: #102f34; }
+.taskbar { position: absolute; z-index: 50; bottom: 0; left: 0; right: 0; height: 38px; padding: 4px 6px; display: flex; align-items: center; gap: 6px; background: #173d40; border-top: 1px solid #6b9485; box-shadow: 0 -3px 0 rgba(8,32,35,.28); }
+.start-button { height: 30px; padding: 0 13px 0 8px; display: flex; align-items: center; gap: 7px; color: #102f34; background: #f4c95d; border: 1px solid #ffe694; font-family: var(--app-font-serif); font-weight: 700; letter-spacing: .03em; }
+.start-button:hover, .start-button.active { background: #ffdb79; }
+.start-mark { width: 18px; height: 18px; border: 2px solid #102f34; display: grid; place-items: center; font-size: 10px; }
+.task-items { flex: 1; display: flex; gap: 5px; overflow: hidden; }
+.task-item { min-width: 120px; max-width: 210px; height: 29px; padding: 0 9px; display: flex; align-items: center; gap: 6px; color: #e8e8c9; background: #275957; border: 1px solid #47736b; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.task-item.active { background: #3c7069; color: #fff6d3; border-color: #a0bfa6; }
+.task-clock { padding: 0 7px; color: #f4c95d; font: 11px var(--app-font-mono); white-space: nowrap; }
+.start-menu { position: absolute; z-index: 60; bottom: 38px; left: 6px; width: min(360px, calc(100vw - 12px)); background: #153a3d; border: 1px solid #94ad9a; box-shadow: 10px 10px 0 rgba(4,27,31,.5); animation: menuIn .16s ease both; }
+.start-banner { padding: 15px; color: #102f34; background: #f4c95d; display: flex; gap: 11px; align-items: center; }
+.start-avatar { width: 40px; height: 40px; display: grid; place-items: center; border: 2px solid #102f34; font: 700 15px var(--app-font-serif); }
+.start-banner strong { font: 700 17px var(--app-font-serif); display: block; }.start-banner small { font: 11px var(--app-font-mono); }
+.start-grid { display: grid; grid-template-columns: 1fr 1fr; padding: 10px; gap: 4px; }
+.start-item { padding: 11px 9px; display: flex; gap: 9px; align-items: center; color: #e9ebce; text-align: left; border: 1px solid transparent; background: transparent; font-size: 11px; }
+.start-item:hover { background: #24514f; border-color: #6b9485; }.start-item svg { color: #f4c95d; width: 19px; }
+.start-footer { border-top: 1px solid #3a625e; padding: 8px 10px; display: flex; justify-content: flex-end; }
+.shutdown { color: #efc7a4; background: transparent; border: 0; font-size: 11px; }
+
+.eyebrow { color: #f4c95d; font: 11px var(--app-font-mono); text-transform: uppercase; letter-spacing: .16em; }
+.display-heading { font-family: var(--app-font-serif); color: #f7f0d2; font-size: clamp(34px, 6vw, 65px); line-height: .94; letter-spacing: -.06em; margin: 7px 0 18px; }
+.body-copy { color: #b7cbc0; line-height: 1.7; font-size: 13px; }
+.rule { border: 0; border-top: 1px solid #315b59; margin: 18px 0; }
+.about-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 22px; }.spec-list { border-left: 2px solid #ee694d; padding-left: 14px; font: 11px/2 var(--app-font-mono); color: #b7cbc0; }.spec-list b { color: #f4c95d; font-weight: 500; }
+.project-list { display: grid; gap: 9px; }.project-row { padding: 13px 14px; background: #19464a; border-left: 3px solid #f4c95d; transition: transform .16s ease, background .16s ease; }.project-row:hover { background: #245a58; transform: translateX(3px); }.project-row header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }.project-row h3 { margin: 0; color: #f7f0d2; font: 600 18px var(--app-font-serif); }.project-row p { color: #b7cbc0; font-size: 12px; line-height: 1.55; margin: 6px 0 9px; }.project-row a { color: #f4c95d; font: 11px var(--app-font-mono); text-decoration: none; }.project-row a:hover { text-decoration: underline; }.tag-row { display: flex; flex-wrap: wrap; gap: 5px; }.tag { color: #a9d5c3; font: 10px var(--app-font-mono); padding: 3px 6px; border: 1px solid #45746c; }
+.skill-cloud { display: flex; flex-wrap: wrap; gap: 7px; }.skill { padding: 7px 10px; border: 1px solid #4b8177; color: #d7e4c7; background: #1c4b4d; font-size: 12px; }.skill:nth-child(3n) { border-color: #ee694d; }.skill:nth-child(4n) { border-color: #f4c95d; }
+.achievement { display: grid; grid-template-columns: 75px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid #315b59; }.achievement:last-child { border: 0; }.ach-year { color: #ee694d; font: 16px var(--app-font-serif); }.achievement strong { color: #f7f0d2; font-family: var(--app-font-serif); }.achievement p { color: #a9c0b6; font-size: 12px; margin: 4px 0 0; line-height: 1.5; }
+.ie-chrome { border: 1px solid #46706c; background: #e7e2c9; color: #19363a; margin: -22px; min-height: calc(100% + 44px); }.ie-toolbar { padding: 9px; background: #c6d0bf; border-bottom: 1px solid #7b9487; display: flex; gap: 6px; }.ie-toolbar button { border: 1px solid #789088; background: #dfe2d1; color: #19363a; padding: 5px 9px; font-size: 11px; }.ie-address { flex: 1; border: 1px solid #85968c; background: #f3f1de; padding: 5px 7px; font: 11px var(--app-font-mono); min-width: 0; }.ie-page { padding: 25px; }.ie-page h2 { font: 700 35px var(--app-font-serif); line-height: .95; margin: 0 0 11px; letter-spacing: -.05em; }.ie-page p { font-size: 13px; line-height: 1.6; max-width: 48ch; }.ie-link { color: #a44a36; font: 11px var(--app-font-mono); background: none; border: 0; padding: 0; text-decoration: underline; }
+.terminal { margin: -22px; min-height: calc(100% + 44px); padding: 18px; background: #071316; color: #c8edb8; font: 12px/1.65 var(--app-font-mono); }.terminal-output { white-space: pre-wrap; }.terminal-form { display: flex; align-items: center; gap: 8px; margin-top: 5px; }.terminal-form span { color: #f4c95d; }.terminal-form input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #c8edb8; font: inherit; }
+.contact-form { display: grid; gap: 11px; }.field-label { display: grid; gap: 5px; color: #9bb7ac; font: 10px var(--app-font-mono); text-transform: uppercase; letter-spacing: .08em; }.field-label input, .field-label textarea { width: 100%; color: #f6efcf; background: #0e3035; border: 1px solid #426b67; padding: 10px; outline: 0; resize: vertical; }.field-label input:focus, .field-label textarea:focus { border-color: #f4c95d; }.submit-button { justify-self: start; color: #102f34; background: #f4c95d; border: 1px solid #ffeb9e; padding: 10px 15px; font: 600 12px var(--app-font-mono); }.submit-button:hover { background: #ffdc7a; }
+.guest-list { display: grid; gap: 9px; margin-top: 16px; }.guest-note { padding: 11px; background: #19464a; border-left: 2px solid #ee694d; }.guest-note b { color: #f4c95d; font: 12px var(--app-font-mono); }.guest-note time { float: right; color: #829e95; font: 10px var(--app-font-mono); }.guest-note p { margin: 5px 0 0; color: #cad8c9; font-size: 12px; }
+.recycle { text-align: center; padding: 25px 8px; }.recycle-icon { color: #ee694d; margin: 0 auto 13px; }.recycle h2 { font: 22px var(--app-font-serif); margin: 0 0 8px; }.recycle p { color: #a9c0b6; font-size: 12px; line-height: 1.6; }.dialog-button { border: 1px solid #719085; color: #e8e9ce; background: #1c4b4d; padding: 8px 11px; font-size: 11px; margin-top: 10px; }.dialog-button:hover { border-color: #f4c95d; color: #f4c95d; }
+.status-note { color: #f4c95d; font: 11px var(--app-font-mono); padding: 9px; border-left: 2px solid #f4c95d; background: rgba(244,201,93,.08); }
+
+@keyframes bootIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+@keyframes loadBar { to { width: 100%; } }
+@keyframes windowIn { from { opacity: 0; transform: scale(.97) translateY(5px); } to { opacity: 1; transform: none; } }
+@keyframes menuIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (max-width: 700px) {
+  .desktop-icons { top: 12px; left: 12px; grid-template-columns: repeat(3, 80px); gap: 12px 5px; }
+  .desktop-icon { width: 80px; font-size: 10px; }.icon-tile { width: 39px; height: 39px; }
+  .desktop-window { inset: 16px 8px 46px 8px !important; min-width: 0; width: auto !important; height: auto !important; }
+  .desktop-window.minimized { display: none; }.window-body { padding: 17px; }.about-grid { grid-template-columns: 1fr; gap: 16px; }.display-heading { font-size: 43px; }.project-row header { display: block; }.project-row header .eyebrow { margin-top: 5px; display: block; }.task-item { min-width: 34px; width: 34px; padding: 0; justify-content: center; }.task-item span { display: none; }.task-clock { padding: 0 3px; font-size: 10px; }.start-button { padding: 0 8px; }.start-button span:not(.start-mark) { display: none; }.start-grid { grid-template-columns: 1fr; }.start-menu { width: min(300px, calc(100vw - 12px)); }.bios { width: calc(100% - 28px); }.boot-brand { font-size: 56px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/**
+ * Using the elevate system.
+ * Automatic contrast adjustment.
+ *
+ * <element className="hover-elevate" />
+ * <element className="active-elevate-2" />
+ *
+ * // Using the tailwind utility when a data attribute is "on"
+ * <element className="toggle-elevate data-[state=on]:toggle-elevated" />
+ * // Or manually controlling the toggle state
+ * <element className="toggle-elevate toggle-elevated" />
+ *
+ * Elevation systems have to handle many states.
+ * - not-hovered, vs. hovered vs. active  (three mutually exclusive states)
+ * - toggled or not
+ * - focused or not (this is not handled with these utilities)
+ *
+ * Even without handling focused or not, this is six possible combinations that
+ * need to be distinguished from eachother visually.
+ */
+@layer utilities {
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type='search']::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  /* .no-default-hover-elevate/no-default-active-elevate is an escape hatch so consumers of
+   * buttons/badges can remove the automatic brightness adjustment on interactions
+   * and program their own. */
+  .no-default-hover-elevate {
+  }
+
+  .no-default-active-elevate {
+  }
+
+  /**
+   * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
+   * This way they can stack/compound. Both will overlap the parent's borders!
+   * So borders will be automatically adjusted both on toggle, and hover/active,
+   * and they will be compounded.
+   */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    /*border-radius: inherit;   match rounded corners */
+    border-radius: inherit;
+    z-index: -1;
+    /* sits behind content but above backdrop */
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  /* If there's a 1px border, adjust the inset so that it covers that parent's border */
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  /* Does not work on elements with overflow:hidden! */
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    /*border-radius: inherit;   match rounded corners */
+    border-radius: inherit;
+    z-index: 999;
+    /* sits in front of content */
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  /* If there's a 1px border, adjust the inset so that it covers that parent's border */
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}
