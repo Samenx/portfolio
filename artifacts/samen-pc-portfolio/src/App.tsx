@@ -4,6 +4,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
+import blissWallpaper from '@assets/bliss-xp.jpg';
 import {
   Award, BookOpen, BriefcaseBusiness, ChevronRight,
   Folder, Globe2, Mail, Minus, Power, Recycle,
@@ -220,14 +221,24 @@ function Desktop() {
   const close = (id: WindowId) => setWindows((current) => current.filter((win) => win.id !== id));
   const update = (id: WindowId, patch: Partial<WinState>) => setWindows((current) => current.map((win) => win.id === id ? { ...win, ...patch } : win));
   const startDrag = (id: WindowId, event: ReactPointerEvent<HTMLDivElement>) => { const target = event.currentTarget.parentElement?.parentElement; const win = windows.find((item) => item.id === id); if (!target || !win || win.maximized) return; setDrag({ id, dx: event.clientX - win.x, dy: event.clientY - win.y }); focus(id); };
-  const icons = useMemo(() => [{ label: 'About Ahmad', id: 'about' as WindowId, icon: <UserRound /> }, { label: 'My Projects', id: 'projects' as WindowId, icon: <Folder /> }, { label: 'Command Prompt', id: 'terminal' as WindowId, icon: <TerminalIcon /> }, { label: 'Guestbook', id: 'guestbook' as WindowId, icon: <BookOpen /> }, { label: 'Recycle Bin', id: 'recycle' as WindowId, icon: <Recycle /> }], []);
+   const icons = useMemo(() => [
+     { label: 'My Computer', id: 'about' as WindowId, icon: <UserRound /> },
+     { label: 'My Documents', id: 'projects' as WindowId, icon: <Folder /> },
+     { label: 'Control Panel', id: 'skills' as WindowId, icon: <Settings /> },
+     { label: 'Achievements', id: 'achievements' as WindowId, icon: <Award /> },
+     { label: 'Command Prompt', id: 'terminal' as WindowId, icon: <TerminalIcon /> },
+     { label: 'Internet Explorer', id: 'browser' as WindowId, icon: <Globe2 /> },
+     { label: 'Outlook Express', id: 'contact' as WindowId, icon: <Mail /> },
+     { label: 'Guestbook', id: 'guestbook' as WindowId, icon: <BookOpen /> },
+     { label: 'Recycle Bin', id: 'recycle' as WindowId, icon: <Recycle /> },
+   ], []);
   const menuApps = [{ id: 'about' as WindowId, title: 'About Ahmad', icon: <UserRound /> }, { id: 'projects' as WindowId, title: 'My Projects', icon: <BriefcaseBusiness /> }, { id: 'skills' as WindowId, title: 'Skills & Toolkit', icon: <Settings /> }, { id: 'achievements' as WindowId, title: 'Achievements', icon: <Award /> }, { id: 'browser' as WindowId, title: 'Internet Explorer', icon: <Globe2 /> }, { id: 'contact' as WindowId, title: 'Contact Ahmad', icon: <Mail /> }];
   return <main className="desktop-shell">
-    <div className="desktop-wallpaper" onClick={() => setStartOpen(false)} />
+     <div className="desktop-wallpaper" style={{ backgroundImage: `url(${blissWallpaper})` }} onClick={() => setStartOpen(false)} />
     <div className="desktop-icons">{icons.map((item) => <DesktopIcon key={item.id} label={item.label} icon={item.icon} onOpen={() => open(item.id)} testId={`desktop-icon-${item.id}`} />)}</div>
     {windows.map((win) => <WindowFrame key={win.id} win={win} onFocus={() => focus(win.id)} onClose={() => close(win.id)} onMinimize={() => update(win.id, { minimized: true })} onMaximize={() => update(win.id, { maximized: !win.maximized })} onDrag={(event) => startDrag(win.id, event)}><WindowContent id={win.id} open={open} /></WindowFrame>)}
     {startOpen && <aside className="start-menu" data-testid="start-menu"><div className="start-banner"><span className="start-avatar">AO</span><div><strong>AHMAD OMAR</strong><small>Abu Elsamen · Amman, JO</small></div></div><div className="start-grid">{menuApps.map((item) => <button className="start-item" key={item.id} onClick={() => open(item.id)} data-testid={`start-item-${item.id}`}>{item.icon}<span>{item.title}</span></button>)}</div><div className="start-footer"><button className="shutdown" onClick={() => window.location.reload()} data-testid="button-restart">Restart SAMEN-PC <Power size={13} style={{ verticalAlign: 'middle' }} /></button></div></aside>}
-    <footer className="taskbar"><button className={`start-button ${startOpen ? 'active' : ''}`} onClick={(event) => { event.stopPropagation(); setStartOpen((current) => !current); }} data-testid="button-start"><span className="start-mark">S</span><span>start</span></button><div className="task-items">{windows.map((win) => <button className={`task-item ${!win.minimized ? 'active' : ''}`} key={win.id} onClick={() => { if (win.minimized) update(win.id, { minimized: false }); focus(win.id); }} data-testid={`task-${win.id}`}><span>{win.title}</span></button>)}</div><time className="task-clock" data-testid="text-clock">{clock.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</time></footer>
+     <footer className="taskbar"><button className={`start-button ${startOpen ? 'active' : ''}`} onClick={(event) => { event.stopPropagation(); setStartOpen((current) => !current); }} data-testid="button-start"><span className="start-mark">⊞</span><span>start</span></button><div className="task-items">{windows.map((win) => <button className={`task-item ${!win.minimized ? 'active' : ''}`} key={win.id} onClick={() => { if (win.minimized) update(win.id, { minimized: false }); focus(win.id); }} data-testid={`task-${win.id}`}><span>{win.title}</span></button>)}</div><time className="task-clock" data-testid="text-clock">{clock.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</time></footer>
   </main>;
 }
 
