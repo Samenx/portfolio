@@ -19,11 +19,11 @@ type GuestNote = { name: string; message: string; date: string };
 const queryClient = new QueryClient();
 
 const projectData = [
-  { id: 'seer', title: 'SEER', kicker: 'AI / research', description: 'An intelligent system that turns complex data into clearer decisions. A study in practical machine learning and human-centered tooling.', tags: ['Python', 'Machine Learning', 'Research'], link: 'https://github.com/' },
-  { id: 'gharsa', title: 'GHARSA', kicker: 'community / web', description: 'A platform concept for growing ideas from the ground up — connecting people, resources, and the momentum to make useful things real.', tags: ['Web Development', 'Product Thinking'], link: 'https://github.com/' },
-  { id: 'os', title: 'Operating System Development', kicker: 'systems / low-level', description: 'Exploring the machinery beneath the interface: bootstrapping, memory, processes, and the exacting discipline of systems work.', tags: ['C', 'Assembly', 'Systems'], link: 'https://github.com/' },
+  { id: 'seer', title: 'SEER', kicker: 'AI / research', description: 'An intelligent system that turns complex data into clearer decisions. A study in practical machine learning and human-centered tooling.', tags: ['Python', 'Machine Learning', 'Research'], link: 'https://github.com/Samenx' },
+  { id: 'gharsa', title: 'GHARSA', kicker: 'community / web', description: 'A platform concept for growing ideas from the ground up — connecting people, resources, and the momentum to make useful things real.', tags: ['Web Development', 'Product Thinking'], link: 'https://github.com/Samenx' },
+  { id: 'os', title: 'Operating System Development', kicker: 'systems / low-level', description: 'Exploring the machinery beneath the interface: bootstrapping, memory, processes, and the exacting discipline of systems work.', tags: ['C', 'Assembly', 'Systems'], link: 'https://github.com/Samenx' },
   { id: 'lfs', title: 'Linux From Scratch', kicker: 'systems / learning', description: 'Built a Linux system component by component to understand what every layer is responsible for — and why it belongs there.', tags: ['Linux', 'Bash', 'Toolchains'], link: 'https://www.linuxfromscratch.org/' },
-  { id: 'mentora', title: 'Mentora', kicker: 'education / concept', description: 'A mentorship experience designed around focused progress, useful feedback, and the people who make learning stick.', tags: ['UX', 'React', 'Education'], link: 'https://github.com/' },
+  { id: 'mentora', title: 'Mentora', kicker: 'education / concept', description: 'A mentorship experience designed around focused progress, useful feedback, and the people who make learning stick.', tags: ['UX', 'React', 'Education'], link: 'https://github.com/Samenx' },
 ];
 
 const skills = ['Python', 'C / C++', 'Java', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'HTML / CSS', 'SQL', 'Git', 'Linux', 'Bash', 'Machine Learning', 'Problem Solving', 'Teamwork'];
@@ -143,10 +143,10 @@ function SkillsWindow({ open }: { open: (id: WindowId) => void }) {
 
 function AchievementsWindow() {
   const rows = [
-    ['2024', 'Computer Science studies', 'Building a strong foundation across algorithms, systems, software design, and the mathematics underneath them.'],
-    ['2024', 'Linux From Scratch', 'A deliberate build-from-zero exercise in toolchains, dependencies, and the architecture of a working Linux environment.'],
-    ['2023', 'Systems exploration', 'Operating system development work that made the invisible parts of computing feel concrete.'],
-    ['Always', 'Learning in public', 'Projects, experiments, and notes that turn questions into working software.'],
+    ['2026', '3rd Place — HTU Blue Horizons Hackathon', 'Led the development of SEER, a marine fishing support system combining environmental sensor data, GPS, and software analytics to help fishermen identify potential fishing areas and reduce wasted time and resources. The project qualified for the Blue Horizons Exhibition in Aqaba.'],
+    ['2026', '2nd Place — E-Commerce Website Competition', 'GHARSA — Plant E-Commerce Platform: Developed a plant e-commerce website designed for the Jordanian market. Customers can browse and purchase plants while viewing suitable temperature and humidity conditions, combining online shopping with practical plant-care guidance.'],
+    ['2024', 'JCPC — Jordan Collegiate Programming Contest', 'Participated as part of a team in a competitive programming environment focused on algorithmic problem solving.'],
+    ['200+', 'Competitive Programming', 'Solved more than 200 problems across competitive programming platforms. Highest Codeforces rating: 1009.'],
   ];
   return <div><div className="eyebrow">ACHIEVEMENTS.LOG / VERIFIED</div><h2 className="display-heading">Milestones.</h2>{rows.map(([year, title, copy]) => <article className="achievement" key={title}><span className="ach-year">{year}</span><div><strong>{title}</strong><p>{copy}</p></div></article>)}</div>;
 }
@@ -179,7 +179,8 @@ function TerminalWindow({ open }: { open: (id: WindowId) => void }) {
     else if (value === 'whoami') result = 'AHMAD OMAR ABU ELSAMEN\\nComputer Science student / software developer\\nAmman, Jordan';
     else if (value === 'projects') result = projectData.map((project) => `  ${project.title}`).join('\\n');
     else if (value === 'skills') result = skills.join('  ·  ');
-    else if (value === 'contact') { open('contact'); result = 'Opening contact window...'; }
+     else if (value === 'contact') { open('contact'); result = 'Opening contact window...'; }
+     else if (value === 'github') result = 'https://github.com/Samenx';
     else if (value === 'secret') result = 'You found the quiet room. Try typing "sudo rm -rf /" (it is harmless here).';
     else if (value === 'sudo rm -rf /') result = 'Nice try. SAMEN-PC protected the important files.\\nNo portfolios were harmed.';
     else if (value === 'clear') { setHistory([]); setCommand(''); return; }
@@ -191,7 +192,7 @@ function TerminalWindow({ open }: { open: (id: WindowId) => void }) {
 function ContactWindow() {
   const [sent, setSent] = useState(false); const [form, setForm] = useState({ name: '', email: '', message: '' });
   const submit = (event: FormEvent) => { event.preventDefault(); setSent(true); };
-  return <div><div className="eyebrow">MAIL.EXE / OUTBOUND MESSAGE</div><h2 className="display-heading">Let's talk.</h2>{sent ? <div className="status-note" data-testid="status-contact">Message staged successfully. Ahmad will receive your note when this portfolio grows a backend.</div> : <form className="contact-form" onSubmit={submit}><label className="field-label">Your name<input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} data-testid="input-contact-name" /></label><label className="field-label">Your email<input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} data-testid="input-contact-email" /></label><label className="field-label">Message<textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} data-testid="input-contact-message" /></label><button className="submit-button" type="submit" data-testid="button-submit-contact"><Send size={13} style={{ verticalAlign: 'middle' }} /> stage message</button></form>}<hr className="rule" /><p className="body-copy">Prefer a direct route? <a href="mailto:ahmad.omar.elsamen@gmail.com" style={{ color: '#f4c95d' }} data-testid="link-email">ahmad.omar.elsamen@gmail.com</a></p><p className="body-copy"><a href="https://github.com/" target="_blank" rel="noreferrer" style={{ color: '#f4c95d', marginRight: 18 }} data-testid="link-github">GitHub</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" style={{ color: '#f4c95d' }} data-testid="link-linkedin">LinkedIn</a></p></div>;
+  return <div><div className="eyebrow">MAIL.EXE / OUTBOUND MESSAGE</div><h2 className="display-heading">Let's talk.</h2>{sent ? <div className="status-note" data-testid="status-contact">Message staged successfully. Ahmad will receive your note when this portfolio grows a backend.</div> : <form className="contact-form" onSubmit={submit}><label className="field-label">Your name<input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} data-testid="input-contact-name" /></label><label className="field-label">Your email<input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} data-testid="input-contact-email" /></label><label className="field-label">Message<textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} data-testid="input-contact-message" /></label><button className="submit-button" type="submit" data-testid="button-submit-contact"><Send size={13} style={{ verticalAlign: 'middle' }} /> stage message</button></form>}<hr className="rule" /><p className="body-copy">Prefer a direct route? <a href="mailto:ahmad.omar.elsamen@gmail.com" style={{ color: '#f4c95d' }} data-testid="link-email">ahmad.omar.elsamen@gmail.com</a></p><p className="body-copy"><a href="https://github.com/Samenx" target="_blank" rel="noreferrer" style={{ color: '#f4c95d', marginRight: 18 }} data-testid="link-github">github.com/Samenx</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" style={{ color: '#f4c95d' }} data-testid="link-linkedin">LinkedIn</a></p></div>;
 }
 
 function RecycleWindow() {
@@ -233,7 +234,7 @@ function Desktop() {
      { label: 'Recycle Bin', id: 'recycle' as WindowId, icon: <Recycle /> },
    ], []);
   const menuApps = [{ id: 'about' as WindowId, title: 'About Ahmad', icon: <UserRound /> }, { id: 'projects' as WindowId, title: 'My Projects', icon: <BriefcaseBusiness /> }, { id: 'skills' as WindowId, title: 'Skills & Toolkit', icon: <Settings /> }, { id: 'achievements' as WindowId, title: 'Achievements', icon: <Award /> }, { id: 'browser' as WindowId, title: 'Internet Explorer', icon: <Globe2 /> }, { id: 'contact' as WindowId, title: 'Contact Ahmad', icon: <Mail /> }];
-  return <main className="desktop-shell">
+     return <main className="desktop-shell">
      <div className="desktop-wallpaper" style={{ backgroundImage: `url(${blissWallpaper})` }} onClick={() => setStartOpen(false)} />
     <div className="desktop-icons">{icons.map((item) => <DesktopIcon key={item.id} label={item.label} icon={item.icon} onOpen={() => open(item.id)} testId={`desktop-icon-${item.id}`} />)}</div>
     {windows.map((win) => <WindowFrame key={win.id} win={win} onFocus={() => focus(win.id)} onClose={() => close(win.id)} onMinimize={() => update(win.id, { minimized: true })} onMaximize={() => update(win.id, { maximized: !win.maximized })} onDrag={(event) => startDrag(win.id, event)}><WindowContent id={win.id} open={open} /></WindowFrame>)}
