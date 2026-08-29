@@ -25,7 +25,7 @@ jobs:
           cache: pnpm
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
-      - run: PORT=5173 BASE_PATH=/SAMEN-PC-Portfolio/ pnpm --filter @workspace/samen-pc-portfolio build
+      - run: PORT=5173 BASE_PATH=/portfolio/ pnpm --filter @workspace/samen-pc-portfolio build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: artifacts/samen-pc-portfolio/dist/public
