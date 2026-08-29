@@ -112,7 +112,7 @@
       }
     ],
     "gallery": [],
-    "aboutImage": "",
+    "aboutImage": "https://i.ibb.co/9HJ41QX2/3.jpg",
     "about": {
       "title": "Ahmad Omar\nAbu Elsamen.",
       "intro": "Computer Science student and software developer based in Amman, Jordan. I like understanding how things work, then making them useful — from the operating system up to the interface someone touches.\n\nThis machine is a small tour through the work, tools, and questions I keep returning to. It is intentionally old-fashioned. The engineering is not.",
@@ -128,5 +128,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:22:13.508Z"
+  "updatedAt": "2026-08-29T23:22:25.554Z"
 }
