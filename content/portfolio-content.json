@@ -37,15 +37,16 @@
       },
       {
         "id": "os",
-        "title": "Operating System Development",
+        "title": "Operating System Development Aenix-Os",
         "kicker": "systems / low-level",
-        "description": "Exploring the machinery beneath the interface: bootstrapping, memory, processes, and the exacting discipline of systems work.",
+        "description": "Aenix-OS is a custom operating system project developed from scratch to explore the fundamental concepts of operating systems and low-level computer architecture. It involves building the core software responsible for booting the computer, managing hardware and memory, handling CPU operations, and providing the basic environment required for programs to run.",
         "tags": [
           "C",
           "Assembly",
           "Systems"
         ],
-        "link": "https://github.com/Samenx"
+        "link": "https://github.com/Samenx/aenix-os",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBBWdffvtWwj1caFgXen3glbXE9ZE225zsbMeLH5aRMQ&s=10"
       },
       {
         "id": "lfs",
@@ -116,5 +117,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:19:26.371Z"
+  "updatedAt": "2026-08-29T23:20:00.612Z"
 }
