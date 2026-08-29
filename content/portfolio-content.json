@@ -22,12 +22,18 @@
         "id": "gharsa",
         "title": "GHARSA",
         "kicker": "community / web",
-        "description": "A platform concept for growing ideas from the ground up — connecting people, resources, and the momentum to make useful things real.",
+        "description": "GHARSA is an e-commerce platform designed to connect customers with plant sellers and greenhouses in Jordan, making it easier to discover, compare, and purchase plants online. The platform focuses on providing information about different plants, including their suitable temperature and humidity ranges, care requirements, categories, and prices in Jordanian dinars. GHARSA aims to simplify the process of buying plants by bringing multiple plant options into one online marketplace, helping customers find plants that match their environment and needs while giving greenhouses and plant sellers a digital platform to showcase and sell their products.",
         "tags": [
-          "Web Development",
-          "Product Thinking"
+          "Ecommerce",
+          "wordpress",
+          "UI",
+          "UX"
         ],
-        "link": "https://github.com/Samenx"
+        "link": "https://live-greenwow.pantheonsite.io/",
+        "image": "https://dev-greenwow.pantheonsite.io/wp-content/uploads/elementor/thumbs/Gemini_Generated_Image_ns8ygqns8ygqns8y-scaled-rshyscdjqo63s5yvxpti0msm9fno8tkkfivyfg797s.png",
+        "retroButtonEnabled": true,
+        "retroButtonLabel": "Visit",
+        "retroButtonLink": "https://live-greenwow.pantheonsite.io/"
       },
       {
         "id": "os",
@@ -110,5 +116,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:18:47.949Z"
+  "updatedAt": "2026-08-29T23:19:26.371Z"
 }
