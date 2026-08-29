@@ -86,7 +86,8 @@
         "id": "blue-horizons",
         "year": "2026",
         "title": "3rd Place — HTU Blue Horizons Hackathon",
-        "description": "Led the development of SEER, a marine fishing support system combining environmental sensor data, GPS, and software analytics to help fishermen identify potential fishing areas and reduce wasted time and resources. The project qualified for the Blue Horizons Exhibition in Aqaba."
+        "description": " SEER, a marine fishing support system combining environmental sensor data, GPS, and software analytics to help fishermen identify potential fishing areas and reduce wasted time and resources. The project qualified for the Blue Horizons Exhibition in Aqaba.",
+        "image": "https://i.ibb.co/LLCzB5k/1.jpg"
       },
       {
         "id": "ecommerce",
@@ -125,5 +126,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:20:47.056Z"
+  "updatedAt": "2026-08-29T23:21:38.933Z"
 }
