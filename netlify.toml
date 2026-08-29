@@ -1,0 +1,6 @@
+[build]
+  command = "PORT=5173 BASE_PATH=/ pnpm --filter @workspace/samen-pc-portfolio build"
+  publish = "artifacts/samen-pc-portfolio/dist/public"
+
+[build.environment]
+  NODE_VERSION = "22"
