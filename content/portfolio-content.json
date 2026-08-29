@@ -52,13 +52,15 @@
         "id": "lfs",
         "title": "Linux From Scratch",
         "kicker": "systems / learning",
-        "description": "Built a Linux system component by component to understand what every layer is responsible for — and why it belongs there.",
+        "description": "Linux From Scratch (LFS) is a project that teaches how to build a complete Linux-based operating system from the ground up. Instead of installing a prebuilt distribution, you manually compile and configure the system’s essential components, including the compiler, libraries, core utilities, and Linux kernel. This provides a deeper understanding of how Linux works internally, how its components interact, and how an operating system is assembled and configured.",
         "tags": [
           "Linux",
           "Bash",
-          "Toolchains"
+          "Toolchains",
+          "package-manager"
         ],
-        "link": "https://www.linuxfromscratch.org/"
+        "link": "https://www.linuxfromscratch.org/",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVO3M4VAyJN77Pn53-VwWi4eC3Z3fGtohTA_9heKUNvQ&s"
       },
       {
         "id": "mentora",
@@ -117,5 +119,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:20:00.612Z"
+  "updatedAt": "2026-08-29T23:20:25.357Z"
 }
