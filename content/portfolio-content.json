@@ -4,14 +4,19 @@
       {
         "id": "seer",
         "title": "SEER",
-        "kicker": "AI / research",
-        "description": "An intelligent system that turns complex data into clearer decisions. A study in practical machine learning and human-centered tooling",
+        "kicker": "research/full-stack-application/embedded-systems",
+        "description": "SEER is a smart fishing assistant designed to help fishermen find better fishing spots instead of wasting hours searching manually. It uses a floating sensor device placed in the sea to collect real-time environmental data such as water temperature, water quality, turbidity, pH, TDS, wave and wind conditions, water pressure, and GPS location. SEER then analyzes this data and compares it with information about fish habitat preferences to identify areas where specific fish are more likely to be found. The system displays this information on a map, showing fishermen recommended fishing locations and the types of fish they are likely to catch. This allows fishermen to make decisions based on actual environmental data rather than relying only on experience or trial and error, helping them reduce search time, fuel consumption, and unsuccessful fishing trips.",
         "tags": [
           "Python",
           "Machine Learning",
-          "Research"
+          "Research",
+          "react",
+          "node",
+          "Sql",
+          "C++"
         ],
-        "link": "https://github.com/Samenx"
+        "link": "https://github.com/Samenx/SEER",
+        "image": "https://i.ibb.co/ZRHqRKJ7/Screenshot-20260829-002201.png"
       },
       {
         "id": "gharsa",
@@ -105,5 +110,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:15:18.394Z"
+  "updatedAt": "2026-08-29T23:18:47.949Z"
 }
