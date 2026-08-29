@@ -9,8 +9,8 @@ The portfolio reads `GET /api/portfolio` publicly; the default admin password is
 ## Vercel deployment
 
 Vercel builds the frontend using the settings in [`vercel.json`](vercel.json) and
-serves the existing API through [`api/[...path].mjs`](api/[...path].mjs). Before
-deploying, add these environment variables in **Vercel Project Settings →
+serves the existing API through the functions in [`api`](api). Before deploying,
+add these environment variables in **Vercel Project Settings →
 Environment Variables** for the Production environment:
 
 - `ADMIN_PASSWORD` — the administrator password.
