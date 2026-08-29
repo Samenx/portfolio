@@ -107,7 +107,8 @@
         "id": "problems",
         "year": "200+",
         "title": "Competitive Programming",
-        "description": "Solved more than 200 problems across competitive programming platforms. Highest Codeforces rating: 1009."
+        "description": "Solved more than 200 problems across competitive programming platforms. Highest Codeforces rating: 1009.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNkld4zT7iFdRe_90DHYzvYKgToU4rGlCOr_tEN9LRPw&s=10"
       }
     ],
     "gallery": [],
@@ -127,5 +128,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:22:04.021Z"
+  "updatedAt": "2026-08-29T23:22:13.508Z"
 }
