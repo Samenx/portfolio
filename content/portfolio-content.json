@@ -66,13 +66,19 @@
         "id": "mentora",
         "title": "Mentora",
         "kicker": "education / concept",
-        "description": "A mentorship experience designed around focused progress, useful feedback, and the people who make learning stick.",
+        "description": "Mentora is a mentoring platform designed to connect students and learners with mentors who can guide them in developing their technical, academic, and career skills. The platform provides a structured environment where users can find suitable mentors, communicate with them, receive guidance, set goals, and track their progress, making the mentoring process more organized and accessible.",
         "tags": [
+          "UI",
           "UX",
-          "React",
-          "Education"
+          "HTML",
+          "PHP",
+          "JS",
+          "CSS",
+          "SQL",
+          "Full-Stack-Application"
         ],
-        "link": "https://github.com/Samenx"
+        "link": "https://github.com/Samenx/Mentora",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3lffHze4OWvZPi7um7ebsbjcC3YUQKEnAEeKurvtPRw&s"
       }
     ],
     "achievements": [
@@ -119,5 +125,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:20:25.357Z"
+  "updatedAt": "2026-08-29T23:20:47.056Z"
 }
