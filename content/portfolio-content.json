@@ -1,0 +1,109 @@
+{
+  "content": {
+    "projects": [
+      {
+        "id": "seer",
+        "title": "SEER",
+        "kicker": "AI / research",
+        "description": "An intelligent system that turns complex data into clearer decisions. A study in practical machine learning and human-centered tooling",
+        "tags": [
+          "Python",
+          "Machine Learning",
+          "Research"
+        ],
+        "link": "https://github.com/Samenx"
+      },
+      {
+        "id": "gharsa",
+        "title": "GHARSA",
+        "kicker": "community / web",
+        "description": "A platform concept for growing ideas from the ground up — connecting people, resources, and the momentum to make useful things real.",
+        "tags": [
+          "Web Development",
+          "Product Thinking"
+        ],
+        "link": "https://github.com/Samenx"
+      },
+      {
+        "id": "os",
+        "title": "Operating System Development",
+        "kicker": "systems / low-level",
+        "description": "Exploring the machinery beneath the interface: bootstrapping, memory, processes, and the exacting discipline of systems work.",
+        "tags": [
+          "C",
+          "Assembly",
+          "Systems"
+        ],
+        "link": "https://github.com/Samenx"
+      },
+      {
+        "id": "lfs",
+        "title": "Linux From Scratch",
+        "kicker": "systems / learning",
+        "description": "Built a Linux system component by component to understand what every layer is responsible for — and why it belongs there.",
+        "tags": [
+          "Linux",
+          "Bash",
+          "Toolchains"
+        ],
+        "link": "https://www.linuxfromscratch.org/"
+      },
+      {
+        "id": "mentora",
+        "title": "Mentora",
+        "kicker": "education / concept",
+        "description": "A mentorship experience designed around focused progress, useful feedback, and the people who make learning stick.",
+        "tags": [
+          "UX",
+          "React",
+          "Education"
+        ],
+        "link": "https://github.com/Samenx"
+      }
+    ],
+    "achievements": [
+      {
+        "id": "blue-horizons",
+        "year": "2026",
+        "title": "3rd Place — HTU Blue Horizons Hackathon",
+        "description": "Led the development of SEER, a marine fishing support system combining environmental sensor data, GPS, and software analytics to help fishermen identify potential fishing areas and reduce wasted time and resources. The project qualified for the Blue Horizons Exhibition in Aqaba."
+      },
+      {
+        "id": "ecommerce",
+        "year": "2026",
+        "title": "2nd Place — E-Commerce Website Competition",
+        "description": "rt7i",
+        "image": "https://i.ibb.co/x8Bjk7VB/2.jpg"
+      },
+      {
+        "id": "jcpc",
+        "year": "2024",
+        "title": "JCPC — Jordan Collegiate Programming Contest",
+        "description": "Participated as part of a team in a competitive programming environment focused on algorithmic problem solving."
+      },
+      {
+        "id": "problems",
+        "year": "200+",
+        "title": "Competitive Programming",
+        "description": "Solved more than 200 problems across competitive programming platforms. Highest Codeforces rating: 1009."
+      }
+    ],
+    "gallery": [],
+    "aboutImage": "",
+    "about": {
+      "title": "Ahmad Omar\nAbu Elsamen.",
+      "intro": "Computer Science student and software developer based in Amman, Jordan. I like understanding how things work, then making them useful — from the operating system up to the interface someone touches.\n\nThis machine is a small tour through the work, tools, and questions I keep returning to. It is intentionally old-fashioned. The engineering is not.",
+      "details": {
+        "location": "Amman, Jordan",
+        "role": "CS student / developer",
+        "status": "Open to good problems",
+        "uptime": "Curiosity: continuous"
+      }
+    },
+    "sections": [],
+    "apps": [],
+    "appIcons": {},
+    "skillIcons": {}
+  },
+  "updatedAt": "2026-08-29T23:15:18.394Z"
+}
