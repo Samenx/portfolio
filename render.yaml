@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: samen-pc-portfolio
+    runtime: node
+    buildCommand: pnpm install --frozen-lockfile && PORT=5173 BASE_PATH=/ pnpm --filter @workspace/samen-pc-portfolio build && pnpm --filter @workspace/api-server build
+    startCommand: pnpm --filter @workspace/api-server start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: ADMIN_SESSION_SECRET
+        generateValue: true
