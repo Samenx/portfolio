@@ -100,7 +100,8 @@
         "id": "jcpc",
         "year": "2024",
         "title": "JCPC — Jordan Collegiate Programming Contest",
-        "description": "Participated as part of a team in a competitive programming environment focused on algorithmic problem solving."
+        "description": "Participated as part of a team in a competitive programming environment focused on algorithmic problem solving.",
+        "image": "https://i.ibb.co/vvj5SbkV/Whats-App-Image-2026-08-29-at-14-47-27.jpg"
       },
       {
         "id": "problems",
@@ -126,5 +127,5 @@
     "appIcons": {},
     "skillIcons": {}
   },
-  "updatedAt": "2026-08-29T23:21:53.333Z"
+  "updatedAt": "2026-08-29T23:22:04.021Z"
 }
